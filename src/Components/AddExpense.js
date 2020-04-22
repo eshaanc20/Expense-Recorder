@@ -73,7 +73,11 @@ class AddExpense extends React.Component {
                                 width: '20%',
                                 marginRight: '4%',
                                 marginBottom: '2%'
-                            }}>
+                            }}
+                            onClick={() => {
+                                this.props.addExpense(this.state.name, this.state.category, this.state.price);
+                                this.handleOpen(false);
+                                }}>
                             Add
                         </Button>
                     </DialogActions>

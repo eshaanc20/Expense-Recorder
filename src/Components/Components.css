@@ -16,3 +16,27 @@
     height: 250px;
     width: 400px;
 }
+
+.expenseData {
+    width: 40%;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.space {
+    width: 114px;
+}
+
+.expenseView{
+    background-color:white;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 80%;
+    font-size: 19px;
+    padding-right: 20px;
+    padding-left: 20px;
+    box-shadow: 10px 20px 20px lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

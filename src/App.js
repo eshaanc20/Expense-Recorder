@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import AddExpense from './Components/AddExpense.js';
+import Expenses from './Components/Expenses.js';
 import Appbar from './Components/Appbar.js';
 
 class App extends React.Component {
@@ -8,7 +8,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Appbar/>
-        <AddExpense/>
+        <Expenses/>
       </div>
     );
   }
