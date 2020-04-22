@@ -37,7 +37,8 @@ class Expenses extends React.Component {
         let dateObject = new Date();
         let date = dateObject.getDate() + "/" + (dateObject.getMonth()+1) + "/" + dateObject.getFullYear();
         //new expense object representing the new expense item
-        let expenseItem = new ExpenseItem(name, category, price, date);
+        let newItemPrice = price == null? 0: parseFloat(price);
+        let expenseItem = new ExpenseItem(name, category, newItemPrice, date);
         //add new expense object to the beginning of the array
         newExpenses.unshift(expenseItem);
         //set new updated array to local storage to store data
@@ -47,7 +48,7 @@ class Expenses extends React.Component {
             allExpenses: newExpenses,
             showExpenses: newExpenses,
             entries: newExpenses.length,
-            total: this.state.total + parseFloat(price),
+            total: this.state.total + newItemPrice,
             filter: 0
         })
     }
@@ -55,7 +56,7 @@ class Expenses extends React.Component {
     //find the total cost given an array of expenses
     findTotalCost(expenses) {
         return expenses.reduce((total, expense) => {
-            return total + parseFloat(expense.price)
+            return total + expense.price
         }, 0)
     }
 
