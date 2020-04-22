@@ -13,7 +13,8 @@ class Expense extends React.Component {
                 <Button 
                     color='secondary' 
                     variant='contained'
-                    style={{height: '40px', marginTop: '10px'}}
+                    style={{height: '40px', marginTop: '10px', width: '15%'}}
+                    onClick={() => this.props.deleteExpense(this.props.name, this.props.category, this.props.price, this.props.date)}
                 >Delete</Button>
             </div>
         )
