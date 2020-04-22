@@ -1,0 +1,14 @@
+#appbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #1a8cff;
+    padding-right: 25px;
+    padding-left: 25px;
+    vertical-align: middle;
+    font-size: 20px;
+}
+
+#dollar {
+    background-color: green;
+}
