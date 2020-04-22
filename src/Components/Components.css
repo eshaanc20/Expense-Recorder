@@ -32,7 +32,8 @@
     width: 80%;
     max-width: 2000px;
     margin: auto;
-    margin-top: 5%;
+    margin-top: 4%;
+    height: 80vh;
 }
 
 #add-expense-view {

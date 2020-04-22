@@ -29,8 +29,7 @@ class AddExpense extends React.Component {
 
     render() {
         return(
-            <div id='add-expense-view'>
-                <p style={{fontSize: '35px', margin: '0px'}}>Your expenses</p>
+            <div>
                 <Button 
                     style={{backgroundColor: '#009900', color: 'white'}}
                     variant='contained'
