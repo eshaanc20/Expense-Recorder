@@ -9,11 +9,16 @@ import MenuItem from '@material-ui/core/MenuItem';
 class Expenses extends React.Component {
     constructor(props) {
         super(props);
+        let expenses = JSON.parse(localStorage.getItem("expenses"));
+        if (expenses == null) {
+            expenses = [];
+        }
+        let cost = this.findTotalCost(expenses);
         this.state = {
-            allExpenses: [],
-            showExpenses: [],
-            total: 0,
-            entries: 0,
+            allExpenses: expenses,
+            showExpenses: expenses,
+            total: cost,
+            entries: expenses.length,
             filter: 0,
         }
     }
@@ -21,7 +26,7 @@ class Expenses extends React.Component {
     addExpense(name, category, price) {
         let newExpenses = [...this.state.allExpenses];
         let dateObject = new Date();
-        let date = dateObject.getDate() + "/" + dateObject.getMonth() + "/" + dateObject.getFullYear();
+        let date = dateObject.getDate() + "/" + dateObject.getMonth()+1 + "/" + dateObject.getFullYear();
         let expenseObject = {
             name: name,
             category: category,
@@ -29,6 +34,7 @@ class Expenses extends React.Component {
             date: date
         }
         newExpenses.unshift(expenseObject);
+        localStorage.setItem('expenses', JSON.stringify(newExpenses));
         this.setState({
             allExpenses: newExpenses,
             showExpenses: newExpenses,
@@ -53,6 +59,7 @@ class Expenses extends React.Component {
             return true;
         })
         let cost = this.findTotalCost(newExpenses);
+        localStorage.setItem('expenses', JSON.stringify(newExpenses));
         this.setState({
             allExpenses: newExpenses,
             showExpenses: newExpenses,
