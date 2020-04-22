@@ -8,7 +8,7 @@ class Expense extends React.Component {
             <div className='expenseView'>
                 <p className='expenseData'>{this.props.name}</p>
                 <p className='expenseData'>{this.props.category}</p>
-                <p className='expenseData'>$ {this.props.price}</p>
+                <p className='expenseData'>${this.props.price}</p>
                 <p className='expenseData'>{this.props.date}</p>
                 <Button 
                     color='secondary' 

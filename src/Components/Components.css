@@ -61,3 +61,20 @@
     flex-direction: row;
     justify-content: space-between;
 }
+
+#summary {
+    margin: auto;
+    background-color: #1a8cff;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 80%;
+    max-width: 2000px;
+    font-size: 19px;
+    padding-right: 20px;
+    padding-left: 20px;
+    color: white;
+    box-shadow: 10px 20px 20px lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
