@@ -20,6 +20,7 @@ class Expenses extends React.Component {
         //find total cost of all items
         let cost = this.findTotalCost(expenses);
         //set initial states when component is constructed
+        //two separate expenses array to allow filtering expenses without losing data
         this.state = {
             allExpenses: expenses,
             showExpenses: expenses,
@@ -141,7 +142,7 @@ class Expenses extends React.Component {
                     {this.state.allExpenses.length !== 0?
                         <div>
                             {this.state.showExpenses.map((expense, index) => {
-                                //map each expense onto the Expense component to be displayed on the webpage
+                                //maps each expense item onto the Expense component to be displayed on the webpage
                                 return <Expense key={index} name={expense.name} category={expense.category} price={expense.price} date={expense.date} deleteExpense={this.deleteExpense.bind(this)}/>
                             })}
                         </div>

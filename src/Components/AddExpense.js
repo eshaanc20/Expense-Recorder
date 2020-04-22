@@ -7,7 +7,9 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import { TextField } from '@material-ui/core';
 
+//component allows users to add expenses
 class AddExpense extends React.Component {
+    // initial states when component is constructed
     state = {
         open: false,
         name: null,
@@ -15,12 +17,14 @@ class AddExpense extends React.Component {
         category: null,
     }
 
+    //opens the menu to add a new expense
     handleOpen(isVisible) {
         this.setState({
             open: isVisible
         })
     }
 
+    //keeps track of all inputs in textfields
     updatedInput(event, input) {
         this.setState({
             [input]: event.target.value

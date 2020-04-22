@@ -2,6 +2,7 @@ import React from 'react';
 import './Components.css';
 import { Button } from '@material-ui/core';
 
+//the UI for an expense item
 class Expense extends React.Component {
     render() {
         return(

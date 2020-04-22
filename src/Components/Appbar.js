@@ -2,6 +2,7 @@ import React from 'react';
 import './Components.css';
 import AppBar from '@material-ui/core/AppBar';
 
+//the component is the appbar for the application
 class Appbar extends React.Component {
     render() {
       return (
