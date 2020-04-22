@@ -33,7 +33,8 @@ class Expenses extends React.Component {
             allExpenses: newExpenses,
             showExpenses: newExpenses,
             entries: newExpenses.length,
-            total: this.state.total + parseFloat(price)
+            total: this.state.total + parseFloat(price),
+            filter: 0
         })
     }
 
@@ -96,7 +97,7 @@ class Expenses extends React.Component {
                             value={this.state.filter} 
                             onChange={this.handleFilter.bind(this)}
                         >
-                            <MenuItem value={0}>Most recent</MenuItem>
+                            <MenuItem value={0}>Sort by most recent</MenuItem>
                             <MenuItem value={1}>Alphabetically by category</MenuItem>
                             <MenuItem value={2}>Highest to lowest in price</MenuItem>
                         </Select>
