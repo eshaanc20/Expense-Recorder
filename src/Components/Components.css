@@ -27,6 +27,25 @@
     width: 165px;
 }
 
+#all-expenses-view {
+    text-align: center;
+    width: 80%;
+    max-width: 2000px;
+    margin: auto;
+    margin-top: 5%;
+}
+
+#add-expense-view {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 2000px;
+    margin: auto;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
 .expenseView{
     margin: auto;
     background-color:white;
