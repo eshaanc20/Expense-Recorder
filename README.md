@@ -15,7 +15,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 2. Open up the terminal and go into the root directory of the project using the cd command
 
-3. In the project directory, run the following command to download all dependencies:
+3. In the project's root directory, run the following command to download all dependencies:
 
 ### `npm install`
 
