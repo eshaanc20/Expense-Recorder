@@ -6,7 +6,7 @@ import { Button } from '@material-ui/core';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 
-//Model for expenses: Array of ExpenseItem Objects where the ExpenseItem object has all properties of the expense
+//Model for expenses: Array of ExpenseItem Objects where an ExpenseItem object has all properties of the expense
 
 //component handles all operations on expenses
 class Expenses extends React.Component {
