@@ -1,0 +1,50 @@
+import React from 'react';
+import './Components.css';
+import Expense from './Expense.js';
+import AddExpense from './AddExpense.js';
+
+class Expenses extends React.Component {
+    state = {
+        expenses: []
+    }
+
+    addExpense(name, category, price) {
+        let newExpenses = [...this.state.expenses];
+        let dateObject = new Date();
+        let date = dateObject.getDate() + "/" + dateObject.getMonth() + "/" + dateObject.getFullYear();
+        let expenseObject = {
+            name: name,
+            category: category,
+            price: price,
+            date: date
+        }
+        newExpenses.push(expenseObject);
+        this.setState({
+            expenses: newExpenses
+        })
+    }
+
+    render() {
+        return(
+            <div>
+                <AddExpense addExpense={this.addExpense.bind(this)}/>
+                <div className='expenseView'>
+                    <p>Name</p>
+                    <p>Category</p>
+                    <p>Price</p>
+                    <p>Date added</p>
+                </div>
+                {this.state.expenses.length !== 0?
+                    <div>
+                        {this.state.expenses.map(expense => {
+                            return <Expense name={expense.name} category={expense.category} price={expense.price} date={expense.date}/>
+                        })}
+                    </div>
+                    : <h4>No expenses</h4>
+                }
+            </div>
+        )
+    }
+}
+
+export default Expenses;
