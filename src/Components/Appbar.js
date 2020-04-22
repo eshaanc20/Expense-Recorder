@@ -5,7 +5,7 @@ import AppBar from '@material-ui/core/AppBar';
 class Appbar extends React.Component {
     render() {
       return (
-        <AppBar>
+        <AppBar style={{position: 'relative'}}>
             <div id="appbar">
                 <p style={{opacity:'0.5'}}>Eshaan Chaudhari</p>
                 <p> Expense Recorder</p>
