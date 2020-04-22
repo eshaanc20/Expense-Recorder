@@ -2,6 +2,7 @@ import React from 'react';
 import './Components.css';
 import Expense from './Expense.js';
 import AddExpense from './AddExpense.js';
+import { Button } from '@material-ui/core';
 
 class Expenses extends React.Component {
     state = {
@@ -29,10 +30,11 @@ class Expenses extends React.Component {
             <div>
                 <AddExpense addExpense={this.addExpense.bind(this)}/>
                 <div className='expenseView'>
-                    <p>Name</p>
-                    <p>Category</p>
-                    <p>Price</p>
-                    <p>Date added</p>
+                    <p className='expenseData'>Name</p>
+                    <p className='expenseData'>Category</p>
+                    <p className='expenseData'>Price</p>
+                    <p className='expenseData'>Date added</p>
+                    <p className='space'></p>
                 </div>
                 {this.state.expenses.length !== 0?
                     <div>

@@ -13,7 +13,7 @@ class Expense extends React.Component {
                 <Button 
                     color='secondary' 
                     variant='contained'
-                    style={{height: '40px', marginTop: '0.75%'}}
+                    style={{height: '40px', marginTop: '10px'}}
                 >Delete</Button>
             </div>
         )

@@ -23,6 +23,10 @@
     text-align: center;
 }
 
+.space {
+    width: 114px;
+}
+
 .expenseView{
     background-color:white;
     margin-top: 25px;
