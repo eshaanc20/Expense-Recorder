@@ -27,7 +27,7 @@ class Expenses extends React.Component {
 
     render() {
         return(
-            <div>
+            <div style={{textAlign: 'center', width: '80%', maxWidth: '2000px'}}>
                 <AddExpense addExpense={this.addExpense.bind(this)}/>
                 <div className='expenseView'>
                     <p className='expenseData'>Name</p>
@@ -42,7 +42,7 @@ class Expenses extends React.Component {
                             return <Expense name={expense.name} category={expense.category} price={expense.price} date={expense.date}/>
                         })}
                     </div>
-                    : <h4>No expenses</h4>
+                    : <h2 style={{margin: 'auto'}}>No expenses</h2>
                 }
             </div>
         )
