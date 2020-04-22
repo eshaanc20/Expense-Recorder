@@ -21,16 +21,17 @@
     width: 40%;
     margin-right: 5px;
     text-align: center;
+    word-break: break-all;
 }
 
 .space {
-    width: 165px;
+    width: 155px;
 }
 
 #all-expenses-view {
     text-align: center;
-    width: 80%;
-    max-width: 2000px;
+    width: 90%;
+    max-width: 1100px;
     margin: auto;
     margin-top: 4%;
     height: 80vh;
